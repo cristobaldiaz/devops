@@ -51,7 +51,8 @@
           }
         else
           { echo "<script>alert('Error uploading $file')</script>";
-            header('location: index.php');}
+            // header('location: index.php');
+          }
     }
     if (isset($_GET['update'])) { // Changes are confirmed
       $sql="update users set name='".$_POST['name']."', nick='".$_POST['nick']."' where id=".$_GET['update'];
