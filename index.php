@@ -47,7 +47,8 @@
       $login = ftp_login($ftp_conn, 'vagrant', 'vagrant');
       if (ftp_put($ftp_conn, $destination_file, $file, FTP_BINARY))
           { echo "<script>alert('Successfully uploaded ".$_FILES['uploaded']['name']."')</script> ";
-            header('location: index.php');}
+            // header('location: index.php');
+          }
         else
           { echo "<script>alert('Error uploading $file')</script>";
             header('location: index.php');}
