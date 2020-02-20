@@ -52,6 +52,7 @@
         else
           { echo "<script>alert('Error uploading $file')</script>";
             // header('location: index.php');
+             print_r( error_get_last() );
           }
     }
     if (isset($_GET['update'])) { // Changes are confirmed
